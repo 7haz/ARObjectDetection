@@ -77,7 +77,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
     private lazy var classificationRequest: VNCoreMLRequest = {
         do {
             // Instantiate the model from its generated Swift class.
-            let model = try VNCoreMLModel(for: Inceptionv3().model)
+            let model = try VNCoreMLModel(for: MechanicWand().model)
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
             })
