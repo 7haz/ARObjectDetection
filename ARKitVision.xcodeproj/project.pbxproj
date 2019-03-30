@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11BEDD9A201A8EBA00B93233 /* TemplateLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */; };
 		630D351F223D575A0044AA69 /* MechanicWand.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 630D351E223D575A0044AA69 /* MechanicWand.mlmodel */; };
+		63C687C8224D3E8D00408A63 /* PartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C687C7224D3E8D00408A63 /* PartData.swift */; };
 		68612C321F7B0746002209A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68612C311F7B0746002209A3 /* AppDelegate.swift */; };
 		68612C361F7B0746002209A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68612C351F7B0746002209A3 /* ViewController.swift */; };
 		68612C3B1F7B0746002209A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68612C3A1F7B0746002209A3 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLabelNode.swift; sourceTree = "<group>"; };
 		30180B1C1F82EB0900BE66A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		630D351E223D575A0044AA69 /* MechanicWand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MechanicWand.mlmodel; sourceTree = "<group>"; };
+		63C687C7224D3E8D00408A63 /* PartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartData.swift; sourceTree = "<group>"; };
 		68612C2E1F7B0746002209A3 /* ARKitVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68612C311F7B0746002209A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68612C351F7B0746002209A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				68612C351F7B0746002209A3 /* ViewController.swift */,
+				63C687C7224D3E8D00408A63 /* PartData.swift */,
 				11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */,
 				841E31011FC287CA00F639ED /* Resources */,
 				841E30FE1FC286E800F639ED /* Support */,
@@ -195,6 +198,7 @@
 				630D351F223D575A0044AA69 /* MechanicWand.mlmodel in Sources */,
 				11BEDD9A201A8EBA00B93233 /* TemplateLabelNode.swift in Sources */,
 				68A81B54200FDD8A00A4ABCA /* Utilities.swift in Sources */,
+				63C687C8224D3E8D00408A63 /* PartData.swift in Sources */,
 				841E31001FC286F900F639ED /* StatusViewController.swift in Sources */,
 				68612C321F7B0746002209A3 /* AppDelegate.swift in Sources */,
 			);

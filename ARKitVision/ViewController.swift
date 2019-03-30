@@ -180,10 +180,46 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
     // When an anchor is added, provide a SpriteKit node for it and set its text to the classification label.
     /// - Tag: UpdateARContent
     func view(_ view: ARSKView, didAdd node: SKNode, for anchor: ARAnchor) {
-        guard let labelText = anchorLabels[anchor.identifier] else {
+        guard let partNo = anchorLabels[anchor.identifier] else {
             fatalError("missing expected associated label for anchor")
         }
-        let label = TemplateLabelNode(text: labelText)
+        
+        let label = TemplateLabelNode(text: partNo)
+        let jsonUrlString = "https://mechanicproject.herokuapp.com/\(partNo)"
+        
+        guard let url = URL(string : jsonUrlString) else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url){ (data,response,err) in
+            // Check for error
+            if let error = err {
+                print("Error requesting data, check for internet connection : ",error.localizedDescription)
+            }
+            
+            guard let data = data else{
+                return
+            }
+            
+            
+            do {
+                let part = try JSONDecoder().decode(Part.self, from: data)
+                
+                // Here you can use the part data as
+                // part.title
+                // part.car
+                // part.year
+                // part.price
+                // part.link
+                
+            }catch let jsonErr {
+                print("Error serializing json : ",jsonErr)
+            }
+            
+            
+            }.resume()
+        
+
         node.addChild(label)
     }
     
