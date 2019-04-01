@@ -14,14 +14,16 @@ struct Part: Decodable {
     let car : String
     let year : String
     let link : String
+    let img : String
     
     init(json: [String:Any]){
-        _id = json["_id"] as? String ?? ""
+        _id   = json["_id"]   as? String ?? ""
         title = json["title"] as? String ?? ""
         price = json["price"] as? String ?? ""
         car   = json["car"]   as? String ?? ""
         year  = json["year"]  as? String ?? ""
         link  = json["link"]  as? String ?? ""
+        img   = json["img"]   as? String ?? ""
     }
 }
 

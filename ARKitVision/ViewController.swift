@@ -206,11 +206,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
                 let part = try JSONDecoder().decode(Part.self, from: data)
                 
                 // Here you can use the part data as
-                // part.title
-                // part.car
-                // part.year
-                // part.price
-                // part.link
+                // part.img ( Containg a url of the image address )
+                // part.title ( the part title )
+                // part.year + part.car example ( 2012 Toyota fj cruiser )
+                // part.price ( in red )
+                // part._id ( the part number ) or you can use partNo from line 183
+                 
                 
             }catch let jsonErr {
                 print("Error serializing json : ",jsonErr)
