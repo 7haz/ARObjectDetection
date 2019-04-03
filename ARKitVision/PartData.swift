@@ -8,7 +8,7 @@
 import UIKit
 
 struct Part: Decodable {
-    let _id : String
+    let _id : String?
     let title : String
     let price : String
     let car : String
@@ -17,7 +17,7 @@ struct Part: Decodable {
     let img : String
     
     init(json: [String:Any]){
-        _id   = json["_id"]   as? String ?? ""
+        _id   = json["_id"]   as? String
         title = json["title"] as? String ?? ""
         price = json["price"] as? String ?? ""
         car   = json["car"]   as? String ?? ""
@@ -26,6 +26,3 @@ struct Part: Decodable {
         img   = json["img"]   as? String ?? ""
     }
 }
-
-
-

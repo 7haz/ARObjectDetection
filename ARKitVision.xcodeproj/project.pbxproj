@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		11BEDD9A201A8EBA00B93233 /* TemplateLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */; };
+		2B3BB4012250350100E5C0E3 /* SCNVector+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BB3FD2250350100E5C0E3 /* SCNVector+Extension.swift */; };
+		2B3BB4032250350100E5C0E3 /* hdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BB3FF2250350100E5C0E3 /* hdHelper.swift */; };
+		2B3BB4072250364500E5C0E3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3BB4062250364500E5C0E3 /* VideoToolbox.framework */; };
+		2BCB52CE22521A99003F9EE4 /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB52CB22521A86003F9EE4 /* JGProgressHUD.framework */; };
+		2BCB52CF22521A99003F9EE4 /* JGProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB52CB22521A86003F9EE4 /* JGProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		630D351F223D575A0044AA69 /* MechanicWand.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 630D351E223D575A0044AA69 /* MechanicWand.mlmodel */; };
 		63C687C8224D3E8D00408A63 /* PartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C687C7224D3E8D00408A63 /* PartData.swift */; };
 		68612C321F7B0746002209A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68612C311F7B0746002209A3 /* AppDelegate.swift */; };
@@ -20,8 +25,50 @@
 		84E14DE61F943834006B5204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E14DE31F943834006B5204 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2BCB52CA22521A86003F9EE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BF7DC5A1AEFCFD9000A0AE0;
+			remoteInfo = "JGProgressHUD-iOS";
+		};
+		2BCB52CC22521A86003F9EE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BABF9A31F7A6133005E783F;
+			remoteInfo = "JGProgressHUD-tvOS";
+		};
+		2BCB52D022521A99003F9EE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BF7DC591AEFCFD9000A0AE0;
+			remoteInfo = "JGProgressHUD-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BCB52D222521A99003F9EE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2BCB52CF22521A99003F9EE4 /* JGProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLabelNode.swift; sourceTree = "<group>"; };
+		2B3BB3FD2250350100E5C0E3 /* SCNVector+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector+Extension.swift"; sourceTree = "<group>"; };
+		2B3BB3FF2250350100E5C0E3 /* hdHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hdHelper.swift; sourceTree = "<group>"; };
+		2B3BB4062250364500E5C0E3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JGProgressHUD.xcodeproj; sourceTree = "<group>"; };
 		30180B1C1F82EB0900BE66A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		630D351E223D575A0044AA69 /* MechanicWand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MechanicWand.mlmodel; sourceTree = "<group>"; };
 		63C687C7224D3E8D00408A63 /* PartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartData.swift; sourceTree = "<group>"; };
@@ -35,6 +82,7 @@
 		68A81B55200FE12E00A4ABCA /* LabelScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LabelScene.sks; sourceTree = "<group>"; };
 		841E30FF1FC286F800F639ED /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		84E14DE31F943834006B5204 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BE0CB8AD3EB16A5095858976 /* Pods_ARKitVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4586FD0F458700000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		F6E1AB00F6E03E7000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,20 +92,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCB52CE22521A99003F9EE4 /* JGProgressHUD.framework in Frameworks */,
+				2B3BB4072250364500E5C0E3 /* VideoToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B3BB3FC225034F600E5C0E3 /* nlhdung */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BB3FF2250350100E5C0E3 /* hdHelper.swift */,
+				2B3BB3FD2250350100E5C0E3 /* SCNVector+Extension.swift */,
+			);
+			path = nlhdung;
+			sourceTree = "<group>";
+		};
+		2B3BB4052250364500E5C0E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BB4062250364500E5C0E3 /* VideoToolbox.framework */,
+				BE0CB8AD3EB16A5095858976 /* Pods_ARKitVision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BCB52C622521A86003F9EE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BCB52CB22521A86003F9EE4 /* JGProgressHUD.framework */,
+				2BCB52CD22521A86003F9EE4 /* JGProgressHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		68612C251F7B0746002209A3 = {
 			isa = PBXGroup;
 			children = (
+				2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */,
 				30180B1C1F82EB0900BE66A3 /* README.md */,
 				68612C301F7B0746002209A3 /* ARKitVision */,
 				68612C2F1F7B0746002209A3 /* Products */,
 				F4592CA0F458F59000000001 /* Configuration */,
 				F6E067E0F6E0713000000001 /* LICENSE */,
+				2B3BB4052250364500E5C0E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +151,7 @@
 		68612C301F7B0746002209A3 /* ARKitVision */ = {
 			isa = PBXGroup;
 			children = (
+				2B3BB3FC225034F600E5C0E3 /* nlhdung */,
 				68612C351F7B0746002209A3 /* ViewController.swift */,
 				63C687C7224D3E8D00408A63 /* PartData.swift */,
 				11BEDD99201A8EBA00B93233 /* TemplateLabelNode.swift */,
@@ -130,10 +210,12 @@
 				68612C2A1F7B0746002209A3 /* Sources */,
 				68612C2B1F7B0746002209A3 /* Frameworks */,
 				68612C2C1F7B0746002209A3 /* Resources */,
+				2BCB52D222521A99003F9EE4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BCB52D122521A99003F9EE4 /* PBXTargetDependency */,
 			);
 			name = ARKitVision;
 			productName = ARKitVision;
@@ -168,12 +250,35 @@
 			mainGroup = 68612C251F7B0746002209A3;
 			productRefGroup = 68612C2F1F7B0746002209A3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2BCB52C622521A86003F9EE4 /* Products */;
+					ProjectRef = 2BCB52C522521A86003F9EE4 /* JGProgressHUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68612C2D1F7B0746002209A3 /* ARKitVision */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2BCB52CB22521A86003F9EE4 /* JGProgressHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JGProgressHUD.framework;
+			remoteRef = 2BCB52CA22521A86003F9EE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BCB52CD22521A86003F9EE4 /* JGProgressHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JGProgressHUD.framework;
+			remoteRef = 2BCB52CC22521A86003F9EE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		68612C2C1F7B0746002209A3 /* Resources */ = {
@@ -195,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				68612C361F7B0746002209A3 /* ViewController.swift in Sources */,
+				2B3BB4032250350100E5C0E3 /* hdHelper.swift in Sources */,
 				630D351F223D575A0044AA69 /* MechanicWand.mlmodel in Sources */,
 				11BEDD9A201A8EBA00B93233 /* TemplateLabelNode.swift in Sources */,
+				2B3BB4012250350100E5C0E3 /* SCNVector+Extension.swift in Sources */,
 				68A81B54200FDD8A00A4ABCA /* Utilities.swift in Sources */,
 				63C687C8224D3E8D00408A63 /* PartData.swift in Sources */,
 				841E31001FC286F900F639ED /* StatusViewController.swift in Sources */,
@@ -205,6 +312,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BCB52D122521A99003F9EE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JGProgressHUD-iOS";
+			targetProxy = 2BCB52D022521A99003F9EE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68612C3C1F7B0746002209A3 /* LaunchScreen.storyboard */ = {
@@ -338,11 +453,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2VVS27NDL;
+				DEVELOPMENT_TEAM = 3KBVTSHNZN;
 				INFOPLIST_FILE = ARKitVision/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.ARKitVision${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hd.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -357,11 +472,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2VVS27NDL;
+				DEVELOPMENT_TEAM = 3KBVTSHNZN;
 				INFOPLIST_FILE = ARKitVision/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.ARKitVision${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hd.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

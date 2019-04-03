@@ -9,6 +9,9 @@ import UIKit
 import SpriteKit
 import ARKit
 import Vision
+import JGProgressHUD
+
+var hud : JGProgressHUD!
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDelegate, ARSessionDelegate {
     
@@ -67,6 +70,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
         
         // Retain the image buffer for Vision processing.
         self.currentBuffer = frame.capturedImage
+        self.capturedImage = UIImage(pixelBuffer: self.currentBuffer!)
         classifyCurrentImage()
     }
     
@@ -96,6 +100,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
     
     // The pixel buffer being held for analysis; used to serialize Vision requests.
     private var currentBuffer: CVPixelBuffer?
+    private var capturedImage : UIImage?
     
     // Queue for dispatching vision classification requests
     private let visionQueue = DispatchQueue(label: "com.example.apple-samplecode.ARKitVision.serialVisionQueue")
@@ -177,55 +182,61 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSKViewDel
         }
     }
     
-    // When an anchor is added, provide a SpriteKit node for it and set its text to the classification label.
-    /// - Tag: UpdateARContent
     func view(_ view: ARSKView, didAdd node: SKNode, for anchor: ARAnchor) {
         guard let partNo = anchorLabels[anchor.identifier] else {
             fatalError("missing expected associated label for anchor")
         }
+        print("didadd \(partNo)")
+
         
-        let label = TemplateLabelNode(text: partNo)
+        //real server
         let jsonUrlString = "https://mechanicproject.herokuapp.com/\(partNo)"
-        
         guard let url = URL(string : jsonUrlString) else {
             return
         }
+        let session = URLSession.shared
+        //show progress
+        hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Loading..."
+        hud.show(in: UIApplication.shared.windows[0].rootViewController!.view)
         
-        URLSession.shared.dataTask(with: url){ (data,response,err) in
+        //request
+        session.dataTask(with: url){ (data,response,err) in
             // Check for error
             if let error = err {
                 print("Error requesting data, check for internet connection : ",error.localizedDescription)
+                DispatchQueue.main.async {
+                    print(error.localizedDescription)
+                    hud.dismiss()
+                }
             }
-            
             guard let data = data else{
                 return
             }
-            
-            
             do {
-                let part = try JSONDecoder().decode(Part.self, from: data)
-                
                 // Here you can use the part data as
                 // part.img ( Containg a url of the image address )
                 // part.title ( the part title )
                 // part.year + part.car example ( 2012 Toyota fj cruiser )
                 // part.price ( in red )
                 // part._id ( the part number ) or you can use partNo from line 183
-                 
-                
+                let part = try JSONDecoder().decode(Part.self, from: data)
+                DispatchQueue.main.async {
+                    hud.dismiss()
+                    let label = TemplateLabelNode(part: part, partNo: partNo)
+                    node.addChild(label)
+                }
             }catch let jsonErr {
                 print("Error serializing json : ",jsonErr)
+                DispatchQueue.main.async {
+                    hud.dismiss()
+                }
             }
             
-            
-            }.resume()
-        
-
-        node.addChild(label)
+        }.resume()
     }
     
     // MARK: - AR Session Handling
-    
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         statusViewController.showTrackingQualityInfo(for: camera.trackingState, autoHide: true)
         
