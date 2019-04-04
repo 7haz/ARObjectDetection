@@ -59,8 +59,8 @@ class TemplateLabelNode: SKReferenceNode {
         }
         parent.fillColor = UIColor.clear
         parent.strokeColor = UIColor.clear
-        parent.xScale = 0.0015
-        parent.yScale = 0.0015
+        parent.xScale = 0.001
+        parent.yScale = 0.001
         for node in parent.children {
             //Labels
             if let label = node as? SKLabelNode {
