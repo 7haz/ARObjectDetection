@@ -3,7 +3,7 @@
 //  ARNumShooter
 //
 //  Created by Dung Nguyen on 2/13/19.
-//  Copyright © 2019 aivantgoyal. All rights reserved.
+//  Copyright © 2019 Dung Nguyen. All rights reserved.
 //
 
 import UIKit

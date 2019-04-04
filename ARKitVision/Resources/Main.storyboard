@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,9 +34,12 @@
                                     <segue destination="edC-Sl-R4A" kind="embed" id="pjI-W9-3IA"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-zW-wpF">
-                                <rect key="frame" x="362" y="670" width="32" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-zW-wpF">
+                                <rect key="frame" x="191" y="670" width="32" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="5ad-ju-ioI"/>
+                                    <constraint firstAttribute="width" constant="32" id="OHr-1y-87G"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="⚡️">
                                     <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -51,9 +54,11 @@
                             <constraint firstItem="B6f-8k-vfK" firstAttribute="trailing" secondItem="9C1-uQ-ecX" secondAttribute="trailing" id="FRK-rs-yMF"/>
                             <constraint firstItem="KDf-aN-SqQ" firstAttribute="leading" secondItem="B6f-8k-vfK" secondAttribute="leading" id="Xhr-Qw-9Nd"/>
                             <constraint firstAttribute="bottom" secondItem="9C1-uQ-ecX" secondAttribute="bottom" id="YDs-dv-OTb"/>
+                            <constraint firstItem="B6f-8k-vfK" firstAttribute="bottom" secondItem="hQu-zW-wpF" secondAttribute="bottom" constant="20" id="bfV-Ot-OFH"/>
                             <constraint firstItem="B6f-8k-vfK" firstAttribute="trailing" secondItem="KDf-aN-SqQ" secondAttribute="trailing" id="nfZ-3N-fjn"/>
                             <constraint firstItem="9C1-uQ-ecX" firstAttribute="leading" secondItem="B6f-8k-vfK" secondAttribute="leading" id="tL2-7i-pR4"/>
                             <constraint firstAttribute="top" secondItem="9C1-uQ-ecX" secondAttribute="top" id="wWJ-9r-hSp"/>
+                            <constraint firstItem="hQu-zW-wpF" firstAttribute="centerX" secondItem="nvV-1F-zG0" secondAttribute="centerX" id="wtW-Yc-aQe"/>
                             <constraint firstItem="KDf-aN-SqQ" firstAttribute="top" secondItem="B6f-8k-vfK" secondAttribute="top" id="yPf-a2-fC7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6f-8k-vfK"/>
@@ -86,9 +91,9 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z2-xi-mqm">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="31.333333333333332"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fyy-w0-Moy">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="31.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="wim-jg-SVN" userLabel="Messages label">

@@ -13,7 +13,7 @@ class TemplateLabelNode: SKReferenceNode {
     private let part: Part?
     private var parts = ["2203031060":"Throttle body","4721735201":"Braker pump master cylinder","4436060320":"Power Steering Reservoir","2220430010":"Air Mass Sensor","9091902256":"Ignition Coil","8211135A90":"Fuse Box","7774035531":"Fuel Canister","9C3Z8101B":"Coolant Recovery Tank","4720109210":"Master Cylinder","EP5Z6766A":"Oil Filter Cap","DA8Z14300BA":"Starter Battery / Cable","8A5Z17618A":"Windshield Washer Fluid Reservoir","281551922229":"Air Filter Box","7T4Z12029DA":"Ignition Coil","182971887260":"Power Steering Pump"]
     
-    //Not in use now
+    //nlhdung-Not in use now
     private let text: String
     private let partNo: String?
     private var image: UIImage? = nil
@@ -93,11 +93,13 @@ class TemplateLabelNode: SKReferenceNode {
                 if let shapeNodeU = node as? SKShapeNode{
                     shapeNodeU.fillColor = SKColor.clear
                     
+                    let cornerRadius : CGFloat = 5.0
                     let cropNode = SKCropNode.init()
-                    let shapeNode = SKShapeNode(rect: shapeNodeU.frame, cornerRadius: 10.0)
-                    //shapeNode.path = UIBezierPath(roundedRect: CGRect(x: -49,y:-10,width: 100, height: 61), cornerRadius: 50).cgPath
+                    let rect = CGRect(x: shapeNodeU.frame.origin.x,y: -shapeNodeU.position.y, width: shapeNodeU.frame.width*0.95, height: shapeNodeU.frame.height)
+                    let shapeNode = SKShapeNode(rect: rect, cornerRadius: cornerRadius)
                     shapeNode.fillColor = SKColor.white
                     cropNode.maskNode = shapeNode
+                    shapeNode.yScale = 2.0
                     shapeNodeU.addChild(shapeNode)
                 }
             }
